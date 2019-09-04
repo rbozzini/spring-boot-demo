@@ -27,6 +27,7 @@ public class BlogController {
         return blogMockedData.getBlogById(blogId);
     }
 
+    // curl localhost:8080/blog/search -X POST -d '{"text" : "Go up, up"}' -H "Content-Type: application/json"
     @PostMapping("/blog/search")
     public List<Blog> search(@RequestBody Map<String, String> body){
         String searchTerm = body.get("text");
